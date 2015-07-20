@@ -30,6 +30,7 @@ Módulo de Ventas, modificado para cubrir requerimientos de Cklass.
 Detalles:
 ---------
 * Crear restricción en campo "¿Es una empresa?"
+* Verificar productos híbridos en lista de productos durante confirmación de venta
     """,
     'author': 'Humanytek',
     'website': 'https://github.com/humanytek/ckl',

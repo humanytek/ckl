@@ -18,5 +18,39 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+{
+    'name': 'HMTK Almacén/Productos',
+    'version': '0.1',
+    'sequence': 1,
+    'category': 'Custom',
+    'complexity': 'easy',
+    'description': """
+Módulo de Productos, modificado para cubrir requerimientos de Cklass.
 
-import sale_order
+Detalles:
+---------
+* Crear campo booleano "Producto híbrido"
+    """,
+    'author': 'Humanytek',
+    'website': 'https://github.com/humanytek/ckl',
+    'depends': [
+        'base',
+        'sale'
+    ],
+    'data': [
+        # Seguridad y grupos
+        'security/ir.model.access.csv',
+    
+        # Data
+        
+        # Vistas
+        'view/productos.xml',
+        
+        # Reportes
+    ],
+    'demo_xml': [],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

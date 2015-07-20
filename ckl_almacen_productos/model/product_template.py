@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2015 Humanytek (<http://humanytek.com>).
+#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,4 +19,26 @@
 #
 ##############################################################################
 
-import sale_order
+from openerp import SUPERUSER_ID
+from openerp import tools
+from openerp.osv import osv, fields, expression
+from openerp.tools.translate import _
+from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
+import openerp.addons.decimal_precision as dp
+from openerp.tools.float_utils import float_round, float_compare
+
+# Python
+import psycopg2
+import logging
+_logger = logging.getLogger(__name__)
+
+
+class product_template_ckl(osv.Model):
+
+    _inherit = 'product.template'
+    _description = 'Add fields in product.template'
+    _columns = {
+        'is_hybrid': fields.boolean('Is hybrid?')
+    }
+    
+product_template_ckl()
